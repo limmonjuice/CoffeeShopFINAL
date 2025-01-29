@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Menu options
+        //Menu options
         String menu = """
                 --- Coffee Menu ---
                 1. Espresso - 50.0 PHP
@@ -17,7 +17,7 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
         int userOrder, quantity;
-        boolean hasOrdered = false; // tracker if any coffee was ordered
+        boolean hasOrdered = false; //Tracker if any coffee was ordered
 
         //Arrays for menu items and their prices
         String[] menuCoffee = {"Espresso", "Latte", "Cappuccino", "Mocha"};
@@ -26,7 +26,7 @@ public class Main {
 
         //Main loop to take orders
         while (true) {
-            System.out.println(menu); // Display the menu
+            System.out.println(menu); //Display the menu
 
             //Loop for selecting a coffee
             while (true) {
@@ -45,16 +45,16 @@ public class Main {
                 }
             }
 
-            // If user presses 0 to finish
+            //If user presses 0 to finish
             if (userOrder == 0) {
                 if (!hasOrdered) {
                     System.out.println("No Coffee Ordered, please try again."); // If no order was placed
                     continue;
                 }
-                break; // Exit main order loop if finished
+                break; //Exit main order loop if finished
             }
 
-            // Set tracker to true once an order is placed
+            //Set tracker to true once an order is placed
             hasOrdered = true;
 
             //Loop for entering quantity
