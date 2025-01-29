@@ -115,15 +115,15 @@ public class Main {
         String receipt = "";
         for (int i = 0; i < coffeeQuantities.length; i++) {
             if (coffeeQuantities[i] > 0) {
-                double subtotal = coffeeQuantities[i] * price[i]; // Calculate subtotal for each coffee type
-                itemGrandTotal += subtotal; // Add to grand total
+                double subtotal = coffeeQuantities[i] * price[i]; //Calculate subtotal for each coffee type
+                itemGrandTotal += subtotal; //Add to grand total
                 receipt += String.format("\n%d x %s @ %.2f PHP each = %.2f", coffeeQuantities[i], menuCoffee[i], price[i], subtotal);
             }
         }
-        double VAT = itemGrandTotal * 0.12; // Calculate VAT (12%)
-        double grandTotal = itemGrandTotal + VAT; // Calculate grand total
+        double VAT = itemGrandTotal * 0.12; //Calculate VAT (12%)
+        double grandTotal = itemGrandTotal + VAT; //Calculate grand total
 
-        // Add the totals to the receipt
+        //Add the totals to the receipt
         receipt += String.format("""
         
         ------------------------------
@@ -132,11 +132,11 @@ public class Main {
         Grand Total: %.2f PHP
         ------------------------------""", itemGrandTotal, VAT, grandTotal);
 
-        System.out.println(receipt); // Display receipt
+        System.out.println(receipt); //Display receipt
 
         //Try to save receipt to a file
         try (FileWriter writer = new FileWriter("CoffeeReceipt.txt")) {
-            writer.write(receipt); // Save the receipt
+            writer.write(receipt); //Save the receipt
             System.out.println("Receipt saved to CoffeeReceipt.txt successfully!");
         } catch (IOException e) {
             System.out.println("Error saving receipt: " + e.getMessage()); //Handle errors while saving
