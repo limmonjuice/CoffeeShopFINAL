@@ -1,7 +1,8 @@
 
 2 x Espresso @ 50.00 PHP each = 100.00
+3 x Latte @ 70.00 PHP each = 210.00
 ------------------------------
-Subtotal: 100.00 PHP
-VAT(12%): 12.00 PHP
-Grand Total: 112.00 PHP
+Subtotal: 310.00 PHP
+VAT(12%): 37.20 PHP
+Grand Total: 347.20 PHP
 ------------------------------
